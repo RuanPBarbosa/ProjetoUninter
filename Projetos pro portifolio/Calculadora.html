@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Simples</title>
+  <style>
+    .calculator {
+      max-width: 200px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 10px solid #410388;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .calculator input, .calculator button {
+      width: calc(100% - 22px);
+      margin: 5px 0;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .calculator button {
+      background-color: rgb(47, 0, 201);
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .calculator button:hover {
+      background-color: #f80606;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="input1" placeholder="Número 1">
+    <input type="text" id="input2" placeholder="Número 2">
+    <input type="text" id="display" disabled>
+    <button onclick="calculate('+')">Adicionar</button>
+    <button onclick="calculate('-')">Subtrair</button>
+    <button onclick="calculate('*')">Multiplicar</button>
+    <button onclick="calculate('/')">Dividir</button>
+    <button onclick="clearDisplay()">Limpar</button>
+  </div>
+
+  <script>
+    function calculate(operation) {
+      var num1 = parseFloat(document.getElementById('input1').value);
+      var num2 = parseFloat(document.getElementById('input2').value);
+      var result;
+      
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Por favor, insira números válidos.");
+        return;
+      }
+
+      switch(operation) {
+        case '+':
+          result = num1 + num2;
+          break;
+        case '-':
+          result = num1 - num2;
+          break;
+        case '*':
+          result = num1 * num2;
+          break;
+        case '/':
+          if (num2 === 0) {
+            alert("Divisão por zero não é permitida.");
+            return;
+          }
+          result = num1 / num2;
+          break;
+        default:
+          alert("Operação inválida.");
+          return;
+      }
+
+      document.getElementById('display').value = result;
+    }
+
+    function clearDisplay() {
+      document.getElementById('input1').value = '';
+      document.getElementById('input2').value = '';
+      document.getElementById('display').value = '';
+    }
+  </script>
+</body>
+</html>

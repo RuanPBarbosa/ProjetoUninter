@@ -1,0 +1,71 @@
+/*Fonte utilizada e removendo margens */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+/*Cor do cabeçalho e estilo do menu */
+header {
+    background-color: red;
+    padding: 10px 0;
+    text-align: center;
+    
+}
+/*removendo os marcadores de lista e definindo o padding */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+/*mudando o estilo da lista */
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+/*mudando o estilo do menu do cabeçalho */
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+/*ajustando a posição principal dos textos no site*/ 
+main {
+    padding: 10px;
+}
+/*Definindo a cor dos titulos */ 
+h1 {
+    color: rgb(255, 0, 0);
+}
+/*Definindo a cor dos textos */
+p {
+    color: red
+}
+/*definindo a cor dos textos do formulario de contato */
+label {
+    color: red;
+}
+/*estilo do label do formulario */
+form label {
+    display: block;
+    margin-top: 10px;
+}
+/*estilo do campo em branco do formulario de contato */
+form input, form textarea {
+    width: 50%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid #ff0000;
+    border-radius: 4px;
+}
+/*Estilo do botão para envio na aba de contato */
+button {
+    background-color: #ffffff;
+    color: rgb(255, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+/*Definindo a cor do botão enviar e como ele deve reagir ao passar o mouse por cima */
+button:hover {
+    background-color: #fa0101;
+}
